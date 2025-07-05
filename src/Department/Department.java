@@ -1,11 +1,12 @@
 package Department;
 
 import java.util.List;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import Employee.Employee;
 import Employee.*;
-public abstract class Department {
+public  class Department {
 //    - Thuộc tính: (departmentId
 //, departmentName
 //, departmentAddress
@@ -15,15 +16,16 @@ public abstract class Department {
 //•	Hiển thị danh sách nhân viên trong phòng.
 //            •	Tính tổng lương nhân viên trong phòng.
     private Scanner sc = new Scanner(System.in);
-    private Integer departmentId;
+    private String departmentId;
     private String departmentName;
     private String departmentAddress;
     private List<Employee> employees;
     public Department() {}
-    public Department(Integer departmentId, String departmentName, String departmentAddress) {
+    public Department(String departmentId, String departmentName, String departmentAddress) {
         this.departmentId = departmentId;
         this.departmentName = departmentName;
         this.departmentAddress = departmentAddress;
+        this.employees = new ArrayList<>();
     }
     public void addEmployee(Employee employee) {employees.add(employee);}
 
@@ -39,12 +41,12 @@ public abstract class Department {
         return totalSalary;
     }
 
-    public String getDepartmentAddress() {
-        return departmentAddress;
+    public String getDepartmentId() {
+        return departmentId;
     }
 
-    public void setDepartmentAddress(String departmentAddress) {
-        this.departmentAddress = departmentAddress;
+    public void setDepartmentId(String departmentId) {
+        this.departmentId = departmentId;
     }
 
     public String getDepartmentName() {
@@ -55,11 +57,11 @@ public abstract class Department {
         this.departmentName = departmentName;
     }
 
-    public Integer getDepartmentId() {
-        return departmentId;
+    public String getDepartmentAddress() {
+        return departmentAddress;
     }
 
-    public void setDepartmentId(Integer departmentId) {
-        this.departmentId = departmentId;
+    public void setDepartmentAddress(String departmentAddress) {
+        this.departmentAddress = departmentAddress;
     }
 }

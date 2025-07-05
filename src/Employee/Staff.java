@@ -1,11 +1,11 @@
 package Employee;
 
 public final class Staff extends Employee {
-    Staff(Integer id, String name, Integer age, String address, Double salary, String position, Integer departmentId){
+    public Staff(Integer id, String name, Integer age, String address, Double salary, String position, Integer departmentId){
         super(id, name, age, address, salary, position, departmentId);
     }
 
-    Staff(){}
+    public Staff(){}
 
     @Override
     public Double calculateSalary() {
